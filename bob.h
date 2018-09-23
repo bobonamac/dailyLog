@@ -18,21 +18,6 @@ int nullCheck(FILE * out) {
 
 /***************************************************/
 
-void logEntry(FILE * out) {
-	printf("Log Entry: ");
-	char logEntry[MAX_ENTRY_SZ];
-	fgets(logEntry, MAX_ENTRY_SZ, stdin);
-
-	timeStamp(out, logEntry);
-
-	fprintf(out, "%s", logEntry);
-	fprintf(out, "\n");
-
-	return;
-}
-
-/***************************************************/
-
 // timeStamp function from wikipedia...
 // https://en.wikipedia.org/wiki/C_date_and_time_functions
 
@@ -65,6 +50,22 @@ void timeStamp(FILE * out, char * logEntry) {
 }
 
 /***************************************************/
+
+void logEntry(FILE * out) {
+	printf("Log Entry: ");
+	char logEntry[MAX_ENTRY_SZ];
+	fgets(logEntry, MAX_ENTRY_SZ, stdin);
+
+	timeStamp(out, logEntry);
+
+	fprintf(out, "%s", logEntry);
+	fprintf(out, "\n");
+
+	return;
+}
+
+/***************************************************/
+
 
 // int checkArgCnt(n) {
 // 	if (n != 1) {

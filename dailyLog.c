@@ -11,7 +11,7 @@ appends prompted text to dailyLog.txt
 
 int main(void)
 {
-	FILE * out = fopen("/Users/bobviens/Documents/KnR/dailyLogFolder/dailyLog.txt", "a");
+	FILE * out = fopen("dailyLog.txt", "a");
 	
 	if (nullCheck(out) == 1) {
 		return 1;
