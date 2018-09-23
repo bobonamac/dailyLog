@@ -1,0 +1,9 @@
+Sun Sep  2 21:33:47 2018
+Explain scanVal
+
+Wed Sep  5 14:30:49 2018
+hgjhgjg
+
+Sun Sep 23 12:50:59 2018
+Just wrote a Connect Three game based on my Tic Tac Toe game!
+
