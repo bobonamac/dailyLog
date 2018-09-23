@@ -7,3 +7,9 @@ hgjhgjg
 Sun Sep 23 12:50:59 2018
 Just wrote a Connect Three game based on my Tic Tac Toe game!
 
+Sun Sep 23 13:37:04 2018
+Now it should work
+
+Sun Sep 23 13:41:33 2018
+1:41
+

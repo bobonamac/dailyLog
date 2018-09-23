@@ -4,18 +4,6 @@ for dailyLog.c
 
 #define MAX_ENTRY_SZ 255
 
-/***************************************************/
-
-int checkArgCnt(n) {
-	if (n != 1) {
-		printf("Usage ./dailyLog\n");
-		return 1;
-	}
-	else {
-		return 0;
-	}
-}
-
 /***************************************************/	
 
 int nullCheck(FILE * out) {
@@ -26,6 +14,21 @@ int nullCheck(FILE * out) {
 	else {
 		return 0;
 	}
+}
+
+/***************************************************/
+
+void logEntry(FILE * out) {
+	printf("Log Entry: ");
+	char logEntry[MAX_ENTRY_SZ];
+	fgets(logEntry, MAX_ENTRY_SZ, stdin);
+
+	timeStamp(out, logEntry);
+
+	fprintf(out, "%s", logEntry);
+	fprintf(out, "\n");
+
+	return;
 }
 
 /***************************************************/
@@ -63,15 +66,12 @@ void timeStamp(FILE * out, char * logEntry) {
 
 /***************************************************/
 
-void logEntry(FILE * out) {
-	printf("Log Entry: ");
-	char logEntry[MAX_ENTRY_SZ];
-	fgets(logEntry, MAX_ENTRY_SZ, stdin);
-
-	timeStamp(out, logEntry);
-
-	fprintf(out, "%s", logEntry);
-	fprintf(out, "\n");
-
-	return;
-}
+// int checkArgCnt(n) {
+// 	if (n != 1) {
+// 		printf("Usage ./dailyLog\n");
+// 		return 1;
+// 	}
+// 	else {
+// 		return 0;
+// 	}
+// }
